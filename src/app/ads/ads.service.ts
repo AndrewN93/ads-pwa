@@ -13,4 +13,8 @@ export class AdsService {
   public getAllAds(): Observable<IAdItem[]> {
     return this.http.get<{ ads: IAdItem[] }>('api/ads').pipe(map(res => res.ads));
   }
+
+  public getSingleAd(id: number): Observable<IAdItem | null> {
+    return this.http.get<IAdItem | null>(`api/ads/${id}`);
+  }
 }

@@ -1,1 +1,9 @@
-<p>single-ad-page works!</p>
+<ng-container *ngIf="current$ | async as current">
+  <h1>{{ current?.name }}</h1>
+  <h3>Price: {{ current?.price }}</h3>
+  <p>{{ current?.description }}</p>
+</ng-container>
+
+<ng-template #nothing>
+  <p>Nothing found</p>
+</ng-template>
