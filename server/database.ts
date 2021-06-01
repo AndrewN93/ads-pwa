@@ -6,6 +6,10 @@ class InMemoryDatabase {
     return Object.values(Ads);
   }
 
+  readById(id: string) {
+    return Ads[id];
+  }
+
 }
 
 export const db = new InMemoryDatabase();
