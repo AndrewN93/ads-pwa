@@ -22,7 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatToolbarModule,
     MatButtonModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: false
+      enabled: environment.production
     }),
   ],
   providers: [],
