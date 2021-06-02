@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <button
-    *ngIf="promptUpdateService.isEnabled"
+    *ngIf="promptUpdateService.isEnabled()"
     color="accent"
     mat-button
     (click)="promptUpdateService.forceCheckUpdate$.next(true)"
