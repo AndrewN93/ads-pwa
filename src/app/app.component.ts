@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PromptUpdateService } from './prompt-update.service';
 
 @Component({
@@ -6,8 +6,12 @@ import { PromptUpdateService } from './prompt-update.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'ads-pwa';
 
-  constructor(promptUpdateService: PromptUpdateService) { }
+  constructor(public promptUpdateService: PromptUpdateService) { }
+
+  ngOnInit() {
+    this.promptUpdateService.acitvateUpdate();
+  }
 }
