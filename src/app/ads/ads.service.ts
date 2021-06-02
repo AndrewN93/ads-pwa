@@ -15,7 +15,6 @@ export class AdsService {
   }
 
   public getSingleAd(id: number): Observable<IAdItem | null> {
-    console.log(id, 'id')
     return this.http.get<{ ad: IAdItem | null }>(`api/ads/${id}`).pipe(map(res => res.ad));
   }
 }
