@@ -1,7 +1,14 @@
 <mat-toolbar color="primary">
-  <span>My PWA Ads App</span>
+  <button
+    *ngIf="promptUpdateService.isEnabled()"
+    color="accent"
+    mat-button
+    (click)="promptUpdateService.forceCheckUpdate$.next(true)"
+  >
+    Force Check Update
+  </button>
+  <span>My PWA Ads App (version 8)</span>
 </mat-toolbar>
 <main class="main">
-  <h1>Version 0</h1>
   <router-outlet></router-outlet>
 </main>
