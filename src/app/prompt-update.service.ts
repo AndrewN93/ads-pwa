@@ -14,7 +14,7 @@ export class PromptUpdateService {
   }
 
   promptUser() {
-    return prompt('There is an update of the app available, please reload the page=)')
+    return confirm('There is an update of the app available, please reload the page=)')
   }
 }
 

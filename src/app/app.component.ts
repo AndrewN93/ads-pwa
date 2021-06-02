@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PromptUpdateService } from './prompt-update.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ads-pwa';
+
+  constructor(promptUpdateService: PromptUpdateService) { }
 }
