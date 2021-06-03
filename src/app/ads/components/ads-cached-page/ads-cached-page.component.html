@@ -1,5 +1,5 @@
 <div class="cards">
-  <ng-container *ngFor="let ad of ads | async">
+  <ng-container *ngFor="let ad of adsCached$ | async">
     <app-ad-card [ad]="ad"></app-ad-card>
   </ng-container>
 </div>

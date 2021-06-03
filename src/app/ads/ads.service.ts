@@ -14,6 +14,14 @@ export class AdsService {
     return this.http.get<{ ads: IAdItem[] }>('api/ads').pipe(map(res => res.ads));
   }
 
+  public getAllAdsCached(): Observable<IAdItem[]> {
+    return this.http.get<{ ads: IAdItem[] }>('api/ads-cached').pipe(map(res => res.ads));
+  }
+
+  public getAllAdsCachedFreshness(): Observable<IAdItem[]> {
+    return this.http.get<{ ads: IAdItem[] }>('api/ads-freshness').pipe(map(res => res.ads));
+  }
+
   public getSingleAd(id: number): Observable<IAdItem | null> {
     return this.http.get<{ ad: IAdItem | null }>(`api/ads/${id}`).pipe(map(res => res.ad));
   }
