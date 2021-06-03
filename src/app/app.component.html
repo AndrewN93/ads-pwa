@@ -8,6 +8,26 @@
     Force Check Update
   </button>
   <span>My PWA Ads App (version 8)</span>
+  <span class="header-spacer"></span>
+  <button
+    mat-raised-button
+    [color]="rla.isActive ? 'accent' : 'basic'"
+    routerLink="/ads"
+    routerLinkActive
+    #rla="routerLinkActive"
+    style="margin-right: 15px"
+  >
+    No Cache
+  </button>
+  <button
+    mat-raised-button
+    [color]="rlaCahced.isActive ? 'accent' : 'basic'"
+    routerLink="/ads-cached"
+    routerLinkActive
+    #rlaCahced="routerLinkActive"
+  >
+    Cached
+  </button>
 </mat-toolbar>
 <main class="main">
   <router-outlet></router-outlet>

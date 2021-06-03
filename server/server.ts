@@ -9,6 +9,7 @@ const app: Application = express();
 app.use(bodyParser.json());
 
 app.route('/api/ads').get(readAllAds)
+app.route('/api/ads-cached').get(readAllAds)
 app.route('/api/ads/:id').get(readAdById)
 
 
