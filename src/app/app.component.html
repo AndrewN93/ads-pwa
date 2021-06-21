@@ -40,5 +40,9 @@
   </button>
 </mat-toolbar>
 <main class="main">
+  <div style="display: flex; justify-content: center; padding-bottom: 20px">
+    <button mat-raised-button color="basic" (click)="subscribeOnPush()">Subscribe</button>
+    <button mat-raised-button color="basic" (click)="sendPush()">Send Message</button>
+  </div>
   <router-outlet></router-outlet>
 </main>
